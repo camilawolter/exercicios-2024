@@ -8,8 +8,8 @@ use Box\Spout\Writer\Common\Creator\WriterEntityFactory;
 
 use Exception;
 
-class Spreadsheet{
-  public function createSpreadsheet(array $papers): void{
+class Spreadsheet {
+  public function createSpreadsheet(array $papers): void {
     try {
       $filePath = __DIR__ . '/../../assets/result.xlsx';
       $writer = WriterEntityFactory::createXLSXWriter();
@@ -66,9 +66,10 @@ class Spreadsheet{
 
       $writer->close();
       print_r("Planilha criada com sucesso");
-      } catch (Exception $e) {
-        print_r("Ocorreu um erro: " . $e->getMessage());
-      }
-
+    } catch (Exception $e) {
+      print_r("Ocorreu um erro: " . $e->getMessage());
     }
+    
+  }
+
 }

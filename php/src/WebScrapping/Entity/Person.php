@@ -5,35 +5,36 @@ namespace Chuva\Php\WebScrapping\Entity;
 /**
  * Paper Author personal information.
  */
-class Person
-{
-    /**
-     * Person name.
-     */
-    public string $name;
+class Person{
+  /**
+   * Person name.
+   * * @var string
+  */
+  public string $name;
 
-    /**
-     * Person institution.
-     */
-    public string $institution;
+  /**
+    * Person institution.
+    * @var string
+    */
+  public string $institution;
 
-    /**
-     * Builder.
-     */
-    public $postId;
+  /**
+    * Builder.
+    * @var string
+    */
+  public $postId;
 
-    /**
-      * Post id.
-      *
-      * @param string $name
-      * @param string $institution
-      * @param string $postId
-      */
-    public function __construct($name, $institution, $postId)
-    {
-        $this->name = $name;
-        $this->institution = $institution;
-        $this->postId = $postId;
-    }
+  /**
+    * Post id.
+    *
+    * @param string $name
+    * @param string $institution
+    * @param string $postId
+    */
+  public function __construct($name, $institution, $postId){
+    $this->name = $name;
+    $this->institution = $institution;
+    $this->postId = $postId;
+  }
 
 }
