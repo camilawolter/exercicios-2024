@@ -16,7 +16,7 @@ class PaperTest extends TestCase {
    */
   public function testConstruct() {
     $paper = new Paper(123, 'Paper title', 'Oral presentation', [
-      new Person('Evariste Galois', 'Lycée Louis-le-Grand'),
+      new Person('Evariste Galois', 'Lycée Louis-le-Grand', 123),
     ]);
 
     $this->assertEquals(123, $paper->id);
