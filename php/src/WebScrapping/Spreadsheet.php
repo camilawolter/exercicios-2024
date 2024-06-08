@@ -6,9 +6,16 @@ use Box\Spout\Common\Entity\Style\CellAlignment;
 use Box\Spout\Writer\Common\Creator\Style\StyleBuilder;
 use Box\Spout\Writer\Common\Creator\WriterEntityFactory;
 
-use Exception;
-
+/**
+ * Handles the creation of spreadsheets from paper data.
+ * 
+ */
 class Spreadsheet {
+
+  /**
+   * Creates a spreadsheet from the given array of papers.
+   *
+  */
   public function createSpreadsheet(array $papers): void {
     try {
       $filePath = __DIR__ . '/../../assets/result.xlsx';
@@ -69,7 +76,7 @@ class Spreadsheet {
     } catch (Exception $e) {
       print_r("Ocorreu um erro: " . $e->getMessage());
     }
-    
+
   }
 
 }
