@@ -23,6 +23,14 @@ class Person {
 
   public $postId;
 
+     /**
+     * Constructor.
+     *
+     * @param string $name
+     * @param string $institution
+     * @param string $postId
+     */
+
   public function __construct($name, $institution, $postId) {
     $this->name = $name;
     $this->institution = $institution;

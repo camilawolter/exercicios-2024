@@ -8,14 +8,12 @@ use Chuva\Php\WebScrapping\Entity\Person;
 /**
  * Does the scrapping of a webpage.
  */
-class Scrapper
-{
+class Scrapper{
 
   /**
-   * Extracts paper info from HTML to an array
+   * Extracts paper info from HTML to an array.
    */
-  public function scrap(\DOMDocument $dom): array
-  {
+  public function scrap(\DOMDocument $dom): array{
     $xPATH  = new \DOMXPath($dom);
     $papers = [];
 
@@ -37,23 +35,22 @@ class Scrapper
       $papers[] = new Paper($postId, $title, $type, $authors);
     }
 
-    // Filtra e retorna o array de papers
+    // Filtra e retorna o array de papers.
     return array_filter($papers);
   }
 
 
-   /**
-   * Extrai e organiza os autores de um artigo.
-   */
-  private function extractAuthors(\DOMNode $authorsNode, string $postId): array
-  {
+  /**
+  * Extrai e organiza os autores de um artigo.
+  */
+  private function extractAuthors(\DOMNode $authorsNode, string $postId): array{
     $authors = [];
 
     // Itera sobre os elementos span dentro do elemento dos autores.
     foreach ($authorsNode->getElementsByTagName('span') as $authorSpan) {
       $authorInstitution = '';
 
-      // Verifica se o elemento span tem o atributo 'title' (instituição do autor).
+      // Verifica se o elemento span tem o atributo 'title'.
       if ($authorSpan->hasAttribute('title')) {
         $authorInstitution = $authorSpan->getAttribute('title');
       }
@@ -66,5 +63,6 @@ class Scrapper
     }
 
     return $authors;
+
   }
 }

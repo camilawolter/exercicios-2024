@@ -2,9 +2,10 @@
 
 namespace Chuva\Php\WebScrapping;
 
+use Box\Spout\Common\Entity\Style\CellAlignment;
 use Box\Spout\Writer\Common\Creator\Style\StyleBuilder;
 use Box\Spout\Writer\Common\Creator\WriterEntityFactory;
-use Box\Spout\Common\Entity\Style\CellAlignment;
+
 use Exception;
 
 class Spreadsheet
@@ -35,7 +36,7 @@ class Spreadsheet
         'Author 6', 'Author 6 Institution',
         'Author 7', 'Author 7 Institution',
         'Author 8', 'Author 8 Institution',
-        'Author 9', 'Author 9 Institution'
+        'Author 9', 'Author 9 Institution',
       ];
 
       $headerRow = WriterEntityFactory::createRowFromArray($headerCells, $headerStyle);
@@ -56,19 +57,20 @@ class Spreadsheet
         $valueCells[] = $paper->title;
         $valueCells[] = $paper->type;
 
-      foreach ($paper->authors as $author) {
-        $valueCells[] = str_replace(';', '', $author->name);
-        $valueCells[] = $author->institution;
-      }
+        foreach ($paper->authors as $author) {
+          $valueCells[] = str_replace(';', '', $author->name);
+          $valueCells[] = $author->institution;
+        }
 
-      $valueRow = WriterEntityFactory::createRowFromArray($valueCells, $defaultStyle);
-      $writer->addRow($valueRow);
-    }
+        $valueRow = WriterEntityFactory::createRowFromArray($valueCells, $defaultStyle);
+        $writer->addRow($valueRow);
+      }
 
       $writer->close();
       print_r("Planilha criada com sucesso");
     } catch (Exception $e) {
       print_r("Ocorreu um erro: " . $e->getMessage());
     }
+
   }
 }
