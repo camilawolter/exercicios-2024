@@ -9,27 +9,29 @@ class Person {
 
   /**
    * Person name.
+   * 
    * @var string
    */
   public string $name;
 
   /**
    * Person institution.
+   * 
    * @var string
    */
   public string $institution;
 
   /**
    * Builder.
+   * 
    * @var string
    */
   public $postId;
 
   /**
    * Post id.
-   * @param string $name
-   * @param string $institution
-   * @param string $postId
+   * 
+   * @var string
    */
   public function __construct($name, $institution, $postId) {
     $this->name = $name;

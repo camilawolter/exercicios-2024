@@ -11,31 +11,31 @@ class Paper {
    * Paper Id.
    *
    * @var int
-  */
+   */
    public $id;
 
   /**
    * Paper Title.
-    *
-    * @var string
+   *
+   * @var string
    */
    public $title;
 
    /**
-    * The paper type (e.g. Poster, Nobel Prize, etc).
+    *  The paper type (e.g. Poster, Nobel Prize, etc).
     *
     * @var string
     */
   public $type;
 
-   /**
-    * Paper authors.
-    *
-   * @var \Chuva\Php\WebScrapping\Entity\Person[]
+  /**
+   * Paper authors.
+   * 
+   * @var string
    */
    public $authors;
 
-   /**
+  /**
    * Builder.
    */
   public function __construct($id, $title, $type, $authors) {

@@ -6,8 +6,6 @@ use Box\Spout\Common\Entity\Style\CellAlignment;
 use Box\Spout\Writer\Common\Creator\Style\StyleBuilder;
 use Box\Spout\Writer\Common\Creator\WriterEntityFactory;
 
-use Exception;
-
 /**
  * Handles the creation of spreadsheets from paper data.
  */
@@ -73,7 +71,8 @@ class Spreadsheet {
 
       $writer->close();
       print_r("Planilha criada com sucesso");
-    } catch (Exception $e) {
+    } 
+    catch (Exception $e) {
       print_r("Ocorreu um erro: " . $e->getMessage());
     }
 
