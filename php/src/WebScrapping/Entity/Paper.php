@@ -12,28 +12,28 @@ class Paper {
    *
    * @var int
    */
-   public $id;
+  public $id;
 
   /**
    * Paper Title.
    *
    * @var string
    */
-   public $title;
+  public $title;
 
-   /**
-    *  The paper type (e.g. Poster, Nobel Prize, etc).
-    *
-    * @var string
-    */
+  /**
+   * The paper type (e.g. Poster, Nobel Prize, etc).
+   *
+   * @var string
+   */
   public $type;
 
   /**
    * Paper authors.
-   * 
+   *
    * @var string
    */
-   public $authors;
+  public $authors;
 
   /**
    * Builder.

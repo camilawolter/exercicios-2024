@@ -71,8 +71,8 @@ class Spreadsheet {
 
       $writer->close();
       print_r("Planilha criada com sucesso");
-    } 
-    catch (Exception $e) {
+    }
+    catch (\Exception $e) {
       print_r("Ocorreu um erro: " . $e->getMessage());
     }
 
