@@ -6,9 +6,9 @@ namespace Chuva\Php\WebScrapping;
  * Runner for the Webscrapping exercice.
  */
 class Main {
-
+  
   /**
-	* Main runner, instantiates a Scrapper and runs.
+  * Main runner, instantiates a Scrapper and runs.
   */
   public static function run(): void {
     $html = file_get_contents(__DIR__ . '/../../assets/origin.html');
